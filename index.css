@@ -508,6 +508,11 @@ p {
   font-size: 16px;
   transition: color 0.3s;
 }
+.nav-links a span{
+    font-size: 1.2em;
+    color: #64ffda;
+    display: none;
+}
 
 .nav-links a:hover {
   color: var(--green);
@@ -538,6 +543,7 @@ p {
 .hamburger span {
   width: 25px;
   height: 3px;
+  color: var(--green);
   background: var(--green);
   border-radius: 2px;
 }
@@ -618,7 +624,8 @@ p {
 .line {
   border-left: 1px solid #fff;
   height: 50px;
-  margin-left: 0 auto;
+  margin-left: 15px;
+  /* margin: 0 auto; */
 }
 /* --- Desktop Overlay --- */
 .project-card {
@@ -694,18 +701,16 @@ p {
   /* margin: -4em 0 0.5em 0; */
 }
 .project-desc {
+  position: absolute;
+  left: -40%;
+  top: 50px;
+  min-width: 350px;
+  max-width: 40vw;
   background: #172a45;
   color: #a8b2d1;
   border-radius: 6px;
   padding: 1.1em 1.3em;
   font-size: 1.04em;
-  margin: 1em 0 1.2em 0;
-  /* Overlay effect: */
-  position: absolute;
-  left: -5%;
-  top: 90px;
-  min-width: 350px;
-  max-width: 40vw;
   z-index: 3;
   box-shadow: 0 2px 18px rgba(0,0,0,0.18);
   border: 1.5px solid #233554;
@@ -736,6 +741,11 @@ p {
     min-width: 220px;
     top: 30px;
   }
+  .nav-menu a span{
+    font-size: 1.2em;
+    color: #64ffda;
+    display: none;
+}
 }
 
 /* Project tags and links */
@@ -769,7 +779,7 @@ p {
     box-shadow: 0 3px 18px rgba(0,0,0,0.22);
     margin-bottom: 2.2em;
   }
-
+  
   .project-img-wrapper {
     position: absolute;
     inset: 0;
@@ -804,7 +814,7 @@ p {
     box-shadow: none;
     border: none;
     /* font-size: 3em; */
-    min-width: 100vw;margin-top: -8em;
+    min-width: 65vw;margin-top: -8em;
     margin-left: -2em;
     font-size: 0.99em;
     text-align: left;
@@ -822,10 +832,11 @@ p {
   width: 25.7em;
 
 }
+
 }
 
 /* Tighten up further for very small screens */
-@media (max-width: 420px) {
+@media (max-width: 485px) {
   .project-card,
   .project-card.reverse  {
     padding: 0.7em 0.4em;
@@ -833,7 +844,9 @@ p {
   .project-title {
     font-size: 1.12em;
   }
+
   .project-desc {
+     min-width: 90vw;
     margin-top: -8em;
     margin-left: -2em;
     font-size: 0.99em;
@@ -905,6 +918,8 @@ p {
   .grid {
     grid-template-columns: 1fr;
     gap: 1em;
+    margin-left: 5em;
+    width: 70%;
   }
   .hero p, .hero-mini1 p, .hero-mini5 p {
     width: 100%;
@@ -915,6 +930,12 @@ p {
   } */
   .hero, .hero-2, .hero-3, .hero-5 {
     margin: 7.5em 0;
+  }
+  .hero-mini1 p{
+    font-size: 0.9em;
+    line-height: 4vh;
+    width: 90%;
+    margin: 1em 1em;
   }
   .hero-img::before {
   content: "";
@@ -976,6 +997,11 @@ p {
     margin-left: 12px;
     border-bottom: 0;
     border-top: 0;
+  }
+  .hero-mini5 p{
+    margin-left: 1em;
+    width: 100%;
+    padding: 2em;
   }
 }
 
@@ -1049,6 +1075,11 @@ p {
     width: 30%;
     padding: 8px 10px;
   }
+  .project-desc {
+    min-width: 115vw;
+    text-align: start;
+    padding-left: -1em;
+  }  
 }
 .details h3{
     width: 30em;
@@ -1056,7 +1087,7 @@ p {
 .hero-section-1 p{
     margin-left: 12em;
 }
-
+  
 /* Utility */
 .btn-dwn {
   position: relative;

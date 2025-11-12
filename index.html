@@ -1,265 +1,307 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Your Name — Full‑Stack Developer Portfolio</title>
-  <meta name="description" content="Full‑stack developer portfolio — projects, skills, and experience. Open to internship roles." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --bg:#0b0c10; --panel:#111318; --text:#e6e7eb; --muted:#a9abba; --primary:#6ee7b7; --accent:#60a5fa; --border:#1f2330;
-      --shadow: 0 10px 30px rgba(0,0,0,.35);
-    }
-    [data-theme="light"]{
-      --bg:#f7f8fb; --panel:#ffffff; --text:#0f172a; --muted:#495263; --primary:#0ea5e9; --accent:#8b5cf6; --border:#e5e7eb;
-      --shadow: 0 10px 24px rgba(2,6,23,.08);
-    }
-    *{box-sizing:border-box}
-    html,body{margin:0;height:100%}
-    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
-    a{color:inherit;text-decoration:none}
-    .container{max-width:1080px;margin:0 auto;padding:24px}
-    .nav{position:sticky;top:0;z-index:50;backdrop-filter:saturate(150%) blur(8px);background:color-mix(in oklab, var(--bg) 85%, transparent);border-bottom:1px solid var(--border)}
-    .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:16px}
-    .brand{display:flex;align-items:center;gap:10px;font-weight:700}
-    .brand .dot{width:10px;height:10px;border-radius:999px;background:var(--primary);box-shadow:0 0 18px var(--primary)}
-    .nav a{padding:10px 12px;border-radius:10px}
-    .nav a:hover{background:color-mix(in oklab, var(--panel) 80%, transparent)}
-    .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border:1px solid var(--border);border-radius:12px;background:var(--panel);box-shadow:var(--shadow)}
-    .btn.primary{background:linear-gradient(135deg,var(--primary),var(--accent));color:#081018;border:none}
-    .grid{display:grid;gap:18px}
-    .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center;padding:48px 0}
-    .card{background:var(--panel);border:1px solid var(--border);border-radius:16px;padding:20px;box-shadow:var(--shadow)}
-    .badge{display:inline-flex;align-items:center;gap:8px;background:color-mix(in oklab, var(--panel) 85%, transparent);border:1px solid var(--border);padding:6px 10px;border-radius:999px;font-size:12px;color:var(--muted)}
-    .section{padding:28px 0}
-    .section h2{margin:0 0 12px;font-size:28px}
-    .muted{color:var(--muted)}
-    .skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px}
-    .skill{padding:12px 14px;border:1px dashed var(--border);border-radius:12px;display:flex;align-items:center;justify-content:space-between}
-    .tags{display:flex;gap:8px;flex-wrap:wrap}
-    .tag{font-size:12px;color:var(--muted);border:1px solid var(--border);padding:4px 8px;border-radius:999px}
-    .projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
-    .project{display:flex;flex-direction:column;gap:10px}
-    .project .thumb{aspect-ratio:16/9;border-radius:12px;background:linear-gradient(135deg, color-mix(in oklab, var(--primary) 30%, transparent), color-mix(in oklab, var(--accent) 25%, transparent));border:1px solid var(--border)}
-    .project a.btn{margin-top:auto}
-    .exp{display:grid;gap:12px}
-    .exp-item{display:grid;gap:6px;border-left:2px solid var(--border);padding-left:12px}
-    .footer{padding:30px 0;color:var(--muted);font-size:14px;border-top:1px solid var(--border);margin-top:32px}
-    .row{display:flex;gap:10px;flex-wrap:wrap}
-    .input{flex:1;min-width:240px;padding:12px;border-radius:12px;border:1px solid var(--border);background:var(--panel);color:var(--text)}
-    .textarea{width:100%;min-height:120px}
-    .switch{border:1px solid var(--border);background:var(--panel);padding:8px 12px;border-radius:12px;cursor:pointer}
-    @media (max-width:900px){.hero{grid-template-columns:1fr}}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/v4-font-face.min.css" integrity="sha512-uFdqh51FxMPYiN4CVQojKoVOXgXXVPmnghOLbDJfMtO7TCfzS1Fu2uToZvWNwJ2J3N6iiefv4h8HSTK6p6sP3w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/fontawesome.min.css" integrity="sha512-M5Kq4YVQrjg5c2wsZSn27Dkfm/2ALfxmun0vUE3mPiJyK53hQBHYCVAtvMYEC7ZXmYLg8DVG4tF8gD27WmDbsg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link 
+    rel="stylesheet" 
+    href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/all.min.css"
+  />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Epunda+Slab:ital,wght@0,300..900;1,300..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./index.css">
 </head>
 <body>
-  <header class="nav">
-    <div class="container nav-inner">
-      <div class="brand"><span class="dot"></span> <span>Your Name</span></div>
-      <nav class="row">
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#experience">Experience</a>
-        <a href="#contact">Contact</a>
-        <button id="themeToggle" class="switch" aria-label="Toggle theme">🌓</button>
-      </nav>
+<div class="container">
+    <header class="header">
+  <nav class="navbar">
+    <h1 class="logo"><span style="margin-left: 0.5em;font-weight: 900;font-size: 2em; font-family: Georgia, 'Times New Roman', Times, serif; color: var(--green);">N</span></h1>
+
+    <div class="nav-links" id="nav-links">
+      <!-- <button class="close" id="close">&times;</button> -->
+      <a href="#about"><span>01.</span> About</a>
+      <a href="#experience"><span>02.</span> Experience</a>
+      <a href="#work"><span>03.</span> Work</a>
+      <a href="#contact"><span>04.</span> Contact</a>
+      <a href="cv.pdf"download="NELSON_CV.pdf"><button class="btn-dwn" style="width: 9em; font-size: 0.8em;">Resume</button></a>
     </div>
-  </header>
 
-  <main class="container">
-    <!-- HERO -->
-    <section class="hero">
-      <div class="card">
-        <span class="badge">🎯 Open to Internship · Full‑Stack</span>
-        <h1 style="margin:12px 0 8px;font-size:36px;line-height:1.2">Full‑Stack Developer building fast, clean, and reliable web apps</h1>
-        <p class="muted">I design and ship end‑to‑end features across the stack. Comfortable with JavaScript/TypeScript, PHP/Laravel, Node/Express, React, and SQL/NoSQL. I care about DX, performance, and clarity.</p>
-        <div class="row" style="margin-top:16px">
-          <a class="btn primary" href="#contact">Contact me</a>
-          <a class="btn" href="#projects">View projects</a>
-          <a class="btn" href="resume.pdf" download>Download résumé</a>
+    <!-- Hamburger -->
+    <div class="hamburger" id="hamburger">
+      <span style="font-size: 2em;"></span>
+      <span style="font-size: 2em;"></span>
+      <span style="font-size: 2em;"></span>
+    </div>
+
+    <!-- Sidebar menu -->
+    <div class="nav-menu" id="nav-menu">
+      <button class="close" id="close">&times;</button>
+      <a href="#about"><span>01.</span> About</a>
+      <a href="#experience"><span>02.</span> Experience</a>
+      <a href="#work"><span>03.</span> Work</a>
+      <a href="#contact"><span>04.</span> Contact</a>
+      <a href=""><button class="btn-dwn">Download Cv</button></a>
+    </div>
+    
+  </nav>
+    </header>
+    <div class="absolute">
+        <div class="social-links">
+            <a href="https://github.com/logicSols-glitch" target="_blank" class="social github">
+            <i class="fab fa-github"></i>
+            </a>
+            <a href="https://twitter.com/Lurdlogic" target="_blank" class="social twitter">
+            <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://linkedin.com/in/IDOKO NELSON" target="_blank" class="social linkedin">
+            <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://instagram.com/yourusername" target="_blank" class="social instagram">
+            <i class="fab fa-instagram"></i>
+            <div class="line"></div>
+            </a>
         </div>
-      </div>
-      <div class="card">
-        <h3 style="margin:0 0 12px">Quick Stats</h3>
-        <div class="grid" style="grid-template-columns:repeat(2,1fr)">
-          <div>
-            <div class="muted" style="font-size:12px">Primary Stack</div>
-            <div>React · Node · PHP · MySQL</div>
-          </div>
-          <div>
-            <div class="muted" style="font-size:12px">What I do</div>
-            <div>APIs · Dashboards · Auth · CRUD</div>
-          </div>
-          <div>
-            <div class="muted" style="font-size:12px">Looking for</div>
-            <div>3–6 month internship</div>
-          </div>
-          <div>
-            <div class="muted" style="font-size:12px">Location</div>
-            <div>Remote / On‑site</div>
-          </div>
+
+    </div>
+    <section class="container-section">
+        <div class="hero">
+            <h6>Hi, My name is</h6>
+            <h1>IDOKO NELSON</h1>
+            <h3>I design and develop for the web.</h3>
+            <p>I’m a web developer interested in building modern, user-friendly websites and applications. I enjoy learning new technologies, improving my skills, and creating projects that make the web more accessible and engaging.</p>
+            <a href="cv.pdf"download="NELSON_CV.pdf"><button class="btn-dwn">Download Cv</button></a>
         </div>
-      </div>
-    </section>
-
-    <!-- PROJECTS -->
-    <section id="projects" class="section">
-      <h2>Selected Projects</h2>
-      <p class="muted">Real work that shows how I think. Each card links to a live demo and repo.</p>
-      <div class="projects">
-        <!-- Project 1 -->
-        <article class="card project">
-          <div class="thumb"></div>
-          <h3>Booking Calendar (JS + PHP)</h3>
-          <p class="muted">Calendar with 1‑hour slots, conflict prevention, localStorage + PHP/MySQL API. Users can book, edit, cancel.</p>
-          <div class="tags">
-            <span class="tag">JavaScript</span><span class="tag">PHP</span><span class="tag">MySQL</span><span class="tag">REST</span>
-          </div>
-          <a class="btn" href="#" target="_blank" rel="noopener">Live Demo</a>
-          <a class="btn" href="#" target="_blank" rel="noopener">Source Code</a>
-        </article>
-        <!-- Project 2 -->
-        <article class="card project">
-          <div class="thumb"></div>
-          <h3>Blog API + Frontend</h3>
-          <p class="muted">Full‑stack blog with CRUD posts, auth, pagination and search. Clean API and lightweight UI.</p>
-          <div class="tags">
-            <span class="tag">Node</span><span class="tag">Express</span><span class="tag">MongoDB</span><span class="tag">JWT</span>
-          </div>
-          <a class="btn" href="#" target="_blank" rel="noopener">Live Demo</a>
-          <a class="btn" href="#" target="_blank" rel="noopener">Source Code</a>
-        </article>
-        <!-- Project 3 -->
-        <article class="card project">
-          <div class="thumb"></div>
-          <h3>E‑commerce Mini</h3>
-          <p class="muted">Payments, cart, and admin dashboard. Focus on security, validation, and DX.</p>
-          <div class="tags">
-            <span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">PostgreSQL</span><span class="tag">Prisma</span>
-          </div>
-          <a class="btn" href="#" target="_blank" rel="noopener">Live Demo</a>
-          <a class="btn" href="#" target="_blank" rel="noopener">Source Code</a>
-        </article>
-      </div>
-    </section>
-
-    <!-- SKILLS -->
-    <section id="skills" class="section">
-      <h2>Skills</h2>
-      <div class="skills">
-        <div class="skill"><span>Frontend</span><span class="muted">HTML · CSS · JS · React</span></div>
-        <div class="skill"><span>Backend</span><span class="muted">Node · Express · PHP · Laravel</span></div>
-        <div class="skill"><span>Databases</span><span class="muted">MySQL · PostgreSQL · MongoDB</span></div>
-        <div class="skill"><span>DevOps</span><span class="muted">Git · Docker · CI/CD (basic)</span></div>
-        <div class="skill"><span>Testing</span><span class="muted">Jest · PHPUnit</span></div>
-        <div class="skill"><span>Other</span><span class="muted">REST · Auth · Web Security</span></div>
-      </div>
-    </section>
-
-    <!-- EXPERIENCE / EDUCATION -->
-    <section id="experience" class="section">
-      <h2>Experience & Education</h2>
-      <div class="grid" style="grid-template-columns:1fr 1fr">
-        <div class="card exp">
-          <div class="exp-item">
-            <strong>Freelance / Personal Projects</strong>
-            <span class="muted">2023 — Present</span>
-            <p>Built small SaaS prototypes, CRUD dashboards, and API services. Focused on clarity, tests, and docs.</p>
-          </div>
-          <div class="exp-item">
-            <strong>Open Source Contributor</strong>
-            <span class="muted">2024 — Present</span>
-            <p>Submitted PRs for documentation, bug fixes, and DX improvements on GitHub projects.</p>
-          </div>
+        <div class="hero-2" id="about">
+            <div class="hero-section1">
+                <p style="display: flex; "> <span class="span-text">.01</span><span style="margin-left: -2.5em;font-size: larger;font-weight: 600;">About Me</span><span class="border-style"></span></p>
+            </div>
+            <div class="hero-section2">
+                <div class="hero-mini1">
+                    <p>Hello! My name is Idoko Nelson and I enjoy building things for the web. My journey into web development began during my time at JIT Consult, where I first learned the fundamentals of creating websites and applications.</p>
+                    <p>Since then, I’ve had the chance to grow my skills further through hands-on experience at CRC, FUTA, where I worked on real-world projects that helped me understand how to build solutions that are both practical and user-friendly</p>
+                    <p>I recently graduated from Federal University Oye-Ekiti in Computer Engineering, and my focus now is on developing clean, responsive, and accessible digital products while constantly learning and improving as a developer.</p>
+                    <p>Here are a few technologies I’ve been working with recently:</p>
+                    <div class="bulletin">
+                        <div class="bulletin-mini">
+                            <li><i class="fa fa-arrow-right"></i>JavaScript</li>
+                            <li><i class="fa fa-arrow-right"></i>Html</li>
+                            <li><i class="fa fa-arrow-right"></i>Css</li>   
+                        </div>
+                        <div class="bulletin-mini">
+                            <li><i class="fa fa-arrow-right"></i>React.js</li>
+                            <li><i class="fa fa-arrow-right"></i>Php</li>
+                            <li><i class="fa fa-arrow-right"></i>SQL Db</li>   
+                        </div>
+                    </div>
+                </div>   
+                <div class="hero-img">
+                <img src="./img/IMG-20250701-WA0064.jpg" alt="">
+                </div> 
+            </div>
         </div>
-        <div class="card exp">
-          <div class="exp-item">
-            <strong>B.Sc. / Ongoing</strong>
-            <span class="muted">Computer Engineering</span>
-            <p>Data structures, networking, databases, and software engineering fundamentals.</p>
-          </div>
-          <div class="exp-item">
-            <strong>Certs</strong>
-            <span class="muted">Optional</span>
-            <p>e.g., Meta Front‑End, AWS Cloud Practitioner, freeCodeCamp, etc.</p>
-          </div>
+        <div class="hero-3" id="experience">
+            <div class="hero-section1">
+                <p style="display: flex; "> <span class="span-text">.02</span><span style="margin-left: -2.5em;font-size: larger;font-weight: 600;">Experience</span><span class="border-style"></span></p>
+            </div>
+            <div class="hero-3-sub1">
+                <div class="sub1">
+                    <div class="experience">
+                        <div class="companies">
+                            <button class="tab active" data-target="Upstatement">Federal University Oye-Ekiti</button>
+                            <button class="tab" data-target="Apple" >JIT Consult</button>
+                            <button class="tab" data-target="scoutstudio" >CRC- FUTA</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="details">
+                    <div class="tab-content active" id="Upstatement">
+                        <h3>Federal University Oye-Ekiti <br> <span>B.Eng. Computer Engineering</span></h3>
+                        <ul>
+                            <li><span><i class="fa fa-arrow-right"></i></span>Gained a strong foundation in computer engineering principles including hardware, software, and networking.</li>
+                            <li><span><i class="fa fa-arrow-right"></i></span>Completed coursework and projects that strengthened problem-solving and analytical skills</li>
+                            <li><span><i class="fa fa-arrow-right"></i></span>Collaborated with peers on group projects, improving teamwork and communication abilities.</li>
+                            <li><span><i class="fa fa-arrow-right"></i></span>Applied engineering knowledge to real-world scenarios through final year project and lab work.</li>
+                            <li><span><i class="fa fa-arrow-right"></i></span>Developed interest in software and web technologies during academic journey.</li>
+                        </ul>
+                    </div> 
+                    <div class="tab-content" id="Apple">
+                        <h3><a href="" style="text-decoration: none;">@JIT Consult</a> <br> <span>Web Development Training</span></h3>
+                        <ul>
+                            <li><span><i class="fa fa-arrow-right"></i></span>Learned the fundamentals of front-end and back-end web development.</li>
+                            <li><span><i class="fa fa-arrow-right"></i></span>Built small projects to practice HTML, CSS, JavaScript, and other core technologies.</li>
+                            <li><span><i class="fa fa-arrow-right"></i></span>Gained exposure to industry best practices in clean code and responsive design.</li>
+                            <li><span><i class="fa fa-arrow-right"></i></span>Developed problem-solving skills by troubleshooting and debugging code.</li>
+                            <li><span><i class="fa fa-arrow-right"></i></span>Strengthened passion for web development through hands-on learning.</li>
+                        </ul>
+                    </div> 
+                    <div class="tab-content" id="scoutstudio">
+                        <h3><a href="" style="text-decoration: none;">@CRC-FUTA</a> <br> <span>Industrial Training Placemen</span></h3>
+                        <ul>
+                            <li><span><i class="fa fa-arrow-right"></i></span>Worked on practical projects that applied classroom learning to real-world environments.</li>
+                            <li><span><i class="fa fa-arrow-right"></i></span>Collaborated with professionals to understand workflow in a tech-driven organization.</li>
+                            <li><span><i class="fa fa-arrow-right"></i></span>Improved technical skills through exposure to software tools and structured development practices.</li>
+                            <li><span><i class="fa fa-arrow-right"></i></span>Learned the importance of teamwork, deadlines, and client-focused solutions.</li>
+                            <li><span><i class="fa fa-arrow-right"></i></span>Built confidence in applying engineering and web development knowledge to practical tasks</li>
+                        </ul>
+                    </div> 
+                </div>
+            </div>
         </div>
-      </div>
-    </section>
+        <div class="hero-4" id="work">
+            <div class="hero-section1">
+                <p style="display: flex; "> <span class="span-text">.04</span><span style="margin-left: -2.5em;font-size: larger;font-weight: 600;">Project's</span><span class="border-style"></span></p>
+            </div>
+                <!-- 1: Image Left, Content Right -->
+            <div class="project-card">
+            <div class="project-img-wrapper">
+                <img src="img/nfc.PNG" alt="Project 1" />
+            </div>
+            <div class="project-content">
+                <div class="featured">
+                    <p class="project-featured">.Project</p>
+                    <h3 class="project-title">Niqqasharpfc</h3>
+                </div>
+                <div class="project-desc">
+                A Trial website football club website based for Niqqasharpfc designed for mobile screens only, featuring a clean layout to showcase club details and updates.
+                </div>
+                <div class="lasticon">
+                    <div class="project-tags">VS Code &nbsp; Html/Css &nbsp; JavaScript&nbsp;</div>
+                    <div class="project-links">
+                    <a href="https://github.com/logicSols-glitch/my-first-repo"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+            </div>
+            </div>
 
-    <!-- CONTACT -->
-    <section id="contact" class="section">
-      <h2>Contact</h2>
-      <p class="muted">Tell me about the role, timeline, and stack. I usually reply within a day.</p>
-      <form class="card" onsubmit="sendMessage(event)">
-        <div class="row">
-          <input class="input" id="name" placeholder="Your name" required />
-          <input class="input" id="email" placeholder="Email" type="email" required />
+            <!-- 2: Image Right, Content Left -->
+            <div class="project-card reverse">
+                <div class="project-content">
+                    <div class="featured">
+                        <p class="project-featured">Ongoing Project</p>
+                        <h3 class="project-title">Betting App</h3>
+                    </div>
+                    <div class="project-desc">
+                    A web app for betting on local university football matches to place bets, follow live scores, and track results and history with real-time updates for campus football games.
+                    </div>
+                    <div class="project-tags">Html/css &nbsp; JavaScript &nbsp; Php and Sql Db</div>
+                    <div class="project-links">
+                    <a href="https://github.com/logicSols-glitch/niqqasharpbet.git"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="project-img-wrapper">
+                    <img src="img/nfcbet.PNG" alt="Project 2" />
+                </div>
+            </div>
+
+            <!-- 3: Image Left, Content Right -->
+            <div class="project-card">
+            <div class="project-img-wrapper">
+                <img src="img/snipshop.PNG" alt="Project 3" />
+            </div>
+            <div class="project-content">
+                <div class="featured">
+                    <p class="project-featured">Practice Project</p>
+                    <h3 class="project-title">E-commerce</h3>
+                </div>
+                <div class="project-desc">
+                A practice project for an e-commerce website for clothing built using html,css and JavaScript
+                </div>
+                <div class="project-tags"> Html &nbsp;JavaScript &nbsp; Css</div>
+                <div class="project-links">
+                <a href="https://github.com/logicSols-glitch/eduford-practice-work.git"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            </div>
+
+            <!-- 4: Image Right, Content Left -->
+            <div class="project-card reverse">
+            <div class="project-content">
+                <div class="featured">
+                    <p class="project-featured">Ongoing Project</p>
+                    <h3 class="project-title">FuoyeSols</h3>
+                </div>
+                <div class="project-desc">
+                An ongoing web platform for FUOYE students Focused on solving student needs by providing access to tutorial questions, study materials, academic resources, and a space to share and find answers.                </div>
+                <div class="project-tags">Html/css &nbsp; JavaScript &nbsp; Php</div>
+                <div class="project-links">
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="project-img-wrapper">
+                <img src="img/fuoyesol.PNG" alt="Project 4" />
+            </div>
+            </div>  
+        </div>  
+        <div class="grid">
+        <!-- Card 1 -->
+            <div class="card">
+            <div class="card-header">
+                <div class="icon"></div>
+                <div class="link"></div>
+            </div>
+            <h2>FPL Clone</h2>
+            <p>A nicer look at your GitHub profile and repo stats. Includes data visualizations.</p>
+            <div class="tags">
+                <span class="tag">Js</span>
+                <span class="tag">PHP</span>
+            </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="card">
+            <div class="card-header">
+                <div class="icon"></div>
+                <div class="link"></div>
+            </div>
+            <h2>Calendar Reminder</h2>
+            <p>A simple Google Book appointment calendar.</p>
+            <div class="tags">
+                <span class="tag">JS</span>
+                <span class="tag">PHP</span>
+            </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="card">
+            <div class="card-header">
+                <div class="icon"></div>
+                <div class="link"></div>
+            </div>
+            <h2>SpotifyLogin Page</h2>
+            <p>A simple SpotifyLogin Page</p>
+            <div class="tags">
+                <!-- <span class="tag"></span> -->
+                <span class="tag">React.js</span>
+            </div>
+            </div>
         </div>
-        <input class="input" id="subject" placeholder="Subject" />
-        <textarea class="input textarea" id="message" placeholder="Your message" required></textarea>
-        <div class="row">
-          <button class="btn primary" type="submit">Send message</button>
-          <a class="btn" href="mailto:you@example.com">Email directly</a>
-          <a class="btn" href="https://github.com/yourname" target="_blank" rel="noopener">GitHub</a>
-          <a class="btn" href="https://www.linkedin.com/in/yourname" target="_blank" rel="noopener">LinkedIn</a>
-        </div>
-      </form>
-    </section>
+        <div class="hero-5" id="contact">
+            <div class="hero-section1">
+                <p style="display: flex; "> <span class="span-text">.04</span><span style="margin-left: -2.5em;font-size: larger;font-weight: 600;">What's Next</span><span class="border-style"></span></p>
+            </div>
+            <div class="hero-section-5">
+                <div class="hero-mini5">
+                    <h3>Get In touch</h3>
+                    <p>I'm currently looking for new opportunities, my inbox is always open. Whether you have a question or just want to say hi, I'll try my best to get back to you!</p>
+                </div>   
+                <div class="hero-img-5">
+                <a href="mailto:nelsonjeremiah699@gmail.com" class="btn-dwn">Get In Touch</a>
+                </div>
+            </div>    
+        </div>    
+    </section> 
+</div>  
 
-    <section class="footer">
-      <div class="row" style="justify-content:space-between">
-        <span>© <span id="year"></span> Your Name</span>
-        <span class="muted">Built with HTML · CSS · JS</span>
-      </div>
-    </section>
-  </main>
-
-  <script>
-    // Theme toggle
-    const root = document.documentElement; const key = "portfolio-theme";
-    const saved = localStorage.getItem(key); if(saved){ document.documentElement.setAttribute('data-theme', saved); }
-    document.getElementById('themeToggle').addEventListener('click', ()=>{
-      const next = (document.documentElement.getAttribute('data-theme') === 'light') ? 'dark' : 'light';
-      document.documentElement.setAttribute('data-theme', next); localStorage.setItem(key,next);
-    });
-
-    // Footer year
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Fake contact handler (replace with your backend or service like Formspree)
-    function sendMessage(e){
-      e.preventDefault();
-      const data = {
-        name: document.getElementById('name').value.trim(),
-        email: document.getElementById('email').value.trim(),
-        subject: document.getElementById('subject').value.trim(),
-        message: document.getElementById('message').value.trim()
-      };
-      if(!data.name || !data.email || !data.message){ alert('Please fill required fields.'); return; }
-      console.log('Contact form submitted', data);
-      alert('Thanks! Your message was sent. (Demo)');
-      e.target.reset();
-    }
-  </script>
-
-  <!-- Structured data for better SEO -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Your Name",
-    "url": "https://yourdomain.com",
-    "jobTitle": "Full‑Stack Developer",
-    "email": "you@example.com",
-    "sameAs": [
-      "https://github.com/yourname",
-      "https://www.linkedin.com/in/yourname"
-    ]
-  }
-  </script>
+<script src="./index.js"></script>   
 </body>
 </html>

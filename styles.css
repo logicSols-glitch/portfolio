@@ -73,7 +73,7 @@ p {
 
 .hero, .about, .hero-4, .hero-5 {
   display: grid;
-  padding: 150px 120px;
+  padding: 150px 120px 30px 120px;
 
 }
 
@@ -746,7 +746,7 @@ p {
 }
 
 .project-card .reverse .project-content {
-  padding: 2em 2.5em 2em 2em; /* more space on right now */
+  padding: 2em 2.5em 2em 2em; 
 }
 .project-card.reverse .featured{
     display: flex;
@@ -825,11 +825,8 @@ p {
 #pro{
   display: none;
 }
-/* ========================================
-   RESPONSIVE BREAKPOINTS & MOBILE STYLES
-   ======================================== */
+/* MOBILE VIEW */
 
-/* TABLET DEVICES (768px - 1024px) */
 @media (max-width: 1024px) {
   
 .hero  , .about, .hero-4, .hero-5 {
@@ -899,11 +896,7 @@ p {
   .details ul li {
     width: 100%;
   }
-   .border-style {
-    margin-top: 0;
-    margin-left: 0.5em;
-    width: 2em;
-  }
+  
 
   .details h3 {
     width: 100%;
@@ -991,7 +984,6 @@ p {
   }
 }
 
-/* MOBILE DEVICES (480px - 768px) */
 @media (max-width: 768px) {
   
   .header {
@@ -1045,9 +1037,9 @@ p {
   }
 
   .border-style {
-    margin-top: 0;
-    margin-left: 0.5em;
-    width: 2em;
+    margin-top: 0.5em;
+    margin-left: 11em;
+    width: 8em;
   }
 
   .hero-section2 {
@@ -1071,13 +1063,13 @@ p {
   .hero-img::before {
   content: "";
   position: absolute;
-  top: 13px;    /* vertical offset */
-  left: 16px;   /* horizontal offset */
+  top: 13px;
+  left: 16px; 
   width: 100%;
   height: 100%;
   border-radius: 8px;
   border: 3px solid #64ffda;
-  background: rgba(100,255,218,0.16); /* optional, for tint */
+  background: rgba(100,255,218,0.16); 
   z-index: 0;
   transition: top 0.2s, left 0.2s;
 }
@@ -1438,9 +1430,117 @@ p {
   }
 }
 
-/* SMALL MOBILE DEVICES (320px - 480px) */
-@media (max-width: 480px) {
+
+@media (max-width: 320px) {
   
+  .hero, .about, .hero-4, .hero-5 {
+    padding: 50px 15px;
+  }
+
+  .hero h1 {
+    font-size: 1.3em;
+  }
+
+  .hero h3 {
+    font-size: 0.9em;
+  }
+
+  .hero p {
+    font-size: 0.85em;
+  }
+
+  .hero-3 {
+    padding: 50px 15px;
+  }
+
+  .tab {
+    font-size: 0.7em;
+    padding: 5px 8px;
+  }
+
+  .grid {
+    padding: 0px 15px;
+    grid-template-columns: 1fr;
+  }
+
+  .wrapper {
+    padding: 20px 10px;
+  }
+
+  .project-links a {
+    margin-right: 0.5em;
+    font-size: 0.9em;
+  }
+
+  .hero-5 {
+    padding: 50px 15px;
+  }
+
+  .project-card {
+    min-height: 250px;
+  }
+
+  .project-content {
+    padding: 1.2em 0.8em 0.8em 0.8em;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-menu .active {
+    right: 0;
+  }
+  .project-desc {
+    position: static ! important;
+    left: 0 !important;
+    right:  auto !important;
+    top: auto !important;
+    min-width: 100%;
+    max-width: 100%;
+    background: transparent;
+    color: #a9abba;
+    border-radius: 0;
+    padding: 0 0 1em 0;
+    font-size: 0.9em;
+    z-index: 3;
+    box-shadow: none;
+    border: none;
+    margin-bottom: 1em;
+    line-height: 1.5;
+  }
+
+  .project-card .project-desc {
+    position: static !important;
+    left: 0 !important;
+    right: auto !important;
+  }
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .btn-dwn:active::after {
+    opacity: 1;
+    top: 8px;
+    left: 8px;
+  }
+
+  .project-img-wrapper img:active {
+    filter: blur(0);
+  }
+
+  .wrapper img:active {
+    filter: blur(0);
+  }
+}
+
+
+@media (max-width: 480px) {
   body {
     font-size: var(--fz-base);
   }
@@ -1636,14 +1736,7 @@ p {
     color: #e6f1ff;
   }
 
-  .project-desc {
-    display: none;
-  }
-
-  .project-card.reverse .project-desc {
-    display: none;
-  }
-
+  
   .project-tags {
     font-size: 0.75em;
     margin-bottom: 0.6em;
@@ -1696,132 +1789,6 @@ p {
     font-size: 10px;
     padding: 3px 6px;
   }
-}
-
-/* EXTRA SMALL DEVICES (280px - 320px) */
-@media (max-width: 320px) {
-  
-  .hero, .about, .hero-4, .hero-5 {
-    padding: 50px 15px;
-  }
-
-  .hero h1 {
-    font-size: 1.3em;
-  }
-
-  .hero h3 {
-    font-size: 0.9em;
-  }
-
-  .hero p {
-    font-size: 0.85em;
-  }
-
-  .hero-3 {
-    padding: 50px 15px;
-  }
-
-  .tab {
-    font-size: 0.7em;
-    padding: 5px 8px;
-  }
-
-  .grid {
-    padding: 0px 15px;
-    grid-template-columns: 1fr;
-  }
-
-  .wrapper {
-    padding: 20px 10px;
-  }
-
-  .project-links a {
-    margin-right: 0.5em;
-    font-size: 0.9em;
-  }
-
-  .hero-5 {
-    padding: 50px 15px;
-  }
-
-  .project-card {
-    min-height: 250px;
-  }
-
-  .project-content {
-    padding: 1.2em 0.8em 0.8em 0.8em;
-  }
-}
-
-/* ========================================
-   HIDE/SHOW NAVIGATION ON MOBILE
-   ======================================== */
-
-@media (max-width: 768px) {
-  .nav-links {
-    display: none;
-  }
-
-  .hamburger {
-    display: flex;
-  }
-
-  .nav-menu .active {
-    right: 0;
-  }
-}
-
-/* ========================================
-   TOUCH-FRIENDLY ADJUSTMENTS
-   ======================================== */
-
-@media (hover: none) and (pointer: coarse) {
-  .btn-dwn:active::after {
-    opacity: 1;
-    top: 8px;
-    left: 8px;
-  }
-
-  .project-img-wrapper img:active {
-    filter: blur(0);
-  }
-
-  .wrapper img:active {
-    filter: blur(0);
-  }
-}
-/* MOBILE DEVICES (480px - 768px) */
-@media (max-width: 768px) {
-  
-  .project-desc {
-    position: static ! important;
-    left: 0 !important;
-    right:  auto !important;
-    top: auto !important;
-    min-width: 100%;
-    max-width: 100%;
-    background: transparent;
-    color: #a9abba;
-    border-radius: 0;
-    padding: 0 0 1em 0;
-    font-size: 0.9em;
-    z-index: 3;
-    box-shadow: none;
-    border: none;
-    margin-bottom: 1em;
-    line-height: 1.5;
-  }
-
-  .project-card .project-desc {
-    position: static !important;
-    left: 0 !important;
-    right: auto !important;
-  }
-}
-
-/* SMALL MOBILE DEVICES (320px - 480px) */
-@media (max-width: 480px) {
-  
   .project-desc {
     position: static !important;
     left: 0 !important;
@@ -1848,7 +1815,6 @@ p {
   }
 }
 
-/* EXTRA SMALL DEVICES (280px - 320px) */
 @media (max-width: 320px) {
   
   .project-desc {

@@ -16,40 +16,39 @@
 <link href="https://fonts.googleapis.com/css2?family=Epunda+Slab:ital,wght@0,300..900;1,300..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./index.css">
+<!-- <link rel="stylesheet" href="./t.css"> -->
 </head>
 <body>
 <div class="container">
     <header class="header">
-  <nav class="navbar">
-    <h1 class="logo"><span style="margin-left: 0.5em;font-weight: 900;font-size: 2em; font-family: Georgia, 'Times New Roman', Times, serif; color: var(--green);">N</span></h1>
+        <nav class="navbar">
+            <h1 class="logo"><span style="margin-left: 0.5em;font-weight: 900;font-size: 2em; font-family: Georgia, 'Times New Roman', Times, serif; color: var(--green);">N</span></h1>
 
-    <div class="nav-links" id="nav-links">
-      <!-- <button class="close" id="close">&times;</button> -->
-      <a href="#about"><span>01.</span> About</a>
-      <a href="#experience"><span>02.</span> Experience</a>
-      <a href="#work"><span>03.</span> Work</a>
-      <a href="#contact"><span>04.</span> Contact</a>
-      <a href="cv.pdf"download="NELSON_CV.pdf"><button class="btn-dwn" style="width: 9em; font-size: 0.8em;">Resume</button></a>
-    </div>
+            <div class="nav-links" id="nav-links">
+            <!-- <button class="close" id="close">&times;</button> -->
+            <a href="#about"><span>01.</span> About</a>
+            <a href="#experience"><span>02.</span> Experience</a>
+            <a href="#work"><span>03.</span> Work</a>
+            <a href="#contact"><span>04.</span> Contact</a>
+            <a href="cv.pdf"download="NELSON_CV.pdf"><button class="btn-dwn" style="width: 9em; font-size: 0.8em;">Resume</button></a>
+            </div>
 
-    <!-- Hamburger -->
-    <div class="hamburger" id="hamburger">
-      <span style="font-size: 2em;"></span>
-      <span style="font-size: 2em;"></span>
-      <span style="font-size: 2em;"></span>
-    </div>
+            <!-- Hamburger -->
+            <div class="hamburger" id="hamburger">
+            <i class="fa-solid fa-bars"></i>
+            </div>
 
-    <!-- Sidebar menu -->
-    <div class="nav-menu" id="nav-menu">
-      <button class="close" id="close">&times;</button>
-      <a href="#about"><span>01.</span> About</a>
-      <a href="#experience"><span>02.</span> Experience</a>
-      <a href="#work"><span>03.</span> Work</a>
-      <a href="#contact"><span>04.</span> Contact</a>
-      <a href=""><button class="btn-dwn">Download Cv</button></a>
-    </div>
-    
-  </nav>
+            <!-- Sidebar menu -->
+            <div class="nav-menu" id="nav-menu">
+            <button class="close" id="close">&times;</button>
+            <a href="#about"><span>01.</span> About</a>
+            <a href="#experience"><span>02.</span> Experience</a>
+            <a href="#work"><span>03.</span> Work</a>
+            <a href="#contact"><span>04.</span> Contact</a>
+            <a href=""><button class="btn-dwn">Download Cv</button></a>
+            </div>
+        
+        </nav>
     </header>
     <div class="absolute">
         <div class="social-links">
@@ -77,7 +76,7 @@
             <p>I’m a web developer interested in building modern, user-friendly websites and applications. I enjoy learning new technologies, improving my skills, and creating projects that make the web more accessible and engaging.</p>
             <a href="cv.pdf"download="NELSON_CV.pdf"><button class="btn-dwn">Download Cv</button></a>
         </div>
-        <div class="hero-2" id="about">
+        <div class="hero-2 about">
             <div class="hero-section1">
                 <p style="display: flex; "> <span class="span-text">.01</span><span style="margin-left: -2.5em;font-size: larger;font-weight: 600;">About Me</span><span class="border-style"></span></p>
             </div>
@@ -96,16 +95,16 @@
                         <div class="bulletin-mini">
                             <li><i class="fa fa-arrow-right"></i>React.js</li>
                             <li><i class="fa fa-arrow-right"></i>Php</li>
-                            <li><i class="fa fa-arrow-right"></i>SQL Db</li>   
+                            <li><i class="fa fa-arrow-right"></i>MySql Db</li>   
                         </div>
                     </div>
                 </div>   
                 <div class="hero-img">
-                <img src="./img/IMG-20250701-WA0064.jpg" alt="">
+                <img src="./img/WhatsApp Image 2025-11-26 at 5.32.16 PM.jpeg" alt="">
                 </div> 
             </div>
         </div>
-        <div class="hero-3" id="experience">
+        <div class="hero-3 experience">
             <div class="hero-section1">
                 <p style="display: flex; "> <span class="span-text">.02</span><span style="margin-left: -2.5em;font-size: larger;font-weight: 600;">Experience</span><span class="border-style"></span></p>
             </div>
@@ -121,7 +120,7 @@
                 </div>
                 <div class="details">
                     <div class="tab-content active" id="Upstatement">
-                        <h3>Federal University Oye-Ekiti <br> <span>B.Eng. Computer Engineering</span></h3>
+                        <h3><a href="">@Federal University Oye-Ekiti</a> <br> <span>B.Eng. Computer Engineering</span></h3>
                         <ul>
                             <li><span><i class="fa fa-arrow-right"></i></span>Gained a strong foundation in computer engineering principles including hardware, software, and networking.</li>
                             <li><span><i class="fa fa-arrow-right"></i></span>Completed coursework and projects that strengthened problem-solving and analytical skills</li>
@@ -153,95 +152,116 @@
                 </div>
             </div>
         </div>
-        <div class="hero-4" id="work">
-            <div class="hero-section1">
-                <p style="display: flex; "> <span class="span-text">.04</span><span style="margin-left: -2.5em;font-size: larger;font-weight: 600;">Project's</span><span class="border-style"></span></p>
-            </div>
-                <!-- 1: Image Left, Content Right -->
-            <div class="project-card">
-            <div class="project-img-wrapper">
-                <img src="img/nfc.PNG" alt="Project 1" />
-            </div>
-            <div class="project-content">
-                <div class="featured">
-                    <p class="project-featured">.Project</p>
-                    <h3 class="project-title">Niqqasharpfc</h3>
+            <div class="hero-4" id="work">
+                <div class="hero-section1">
+                    <p style="display: flex; "> <span class="span-text">.04</span><span style="margin-left: -2.5em;font-size: larger;font-weight: 600;">Project's</span><span class="border-style"></span></p>
                 </div>
-                <div class="project-desc">
-                A Trial website football club website based for Niqqasharpfc designed for mobile screens only, featuring a clean layout to showcase club details and updates.
-                </div>
-                <div class="lasticon">
-                    <div class="project-tags">VS Code &nbsp; Html/Css &nbsp; JavaScript&nbsp;</div>
-                    <div class="project-links">
-                    <a href="https://github.com/logicSols-glitch/my-first-repo"><i class="fab fa-github"></i></a>
-                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                    <!-- 1: Image Left, Content Right -->
+                <div class="wrapper">
+                    <div class="wrap">
+                        <img src="./img/academy.PNG" alt="">
+                    </div>
+                    <div class="contain-wrap">
+                        <div class="text-contain">
+                            <h3>project</h3>
+                            <p>Novabuk Healthcare</p>
+                        </div>
+                        <div class="descrption-contain">
+                            A Trial website football club website based for Niqqasharpfc designed for mobile screens only, featuring a clean layout to showcase club details and updates.
+                        </div>
+                        <div class="link-contain">
+                            <div class="project-tags"> Html &nbsp;JavaScript &nbsp; Css</div>
+                            <div class="project-links">
+                            <a href="https://github.com/logicSols-glitch/eduford-practice-work.git"><i class="fab fa-github"></i></a>
+                            <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            </div>
+                
 
-            <!-- 2: Image Right, Content Left -->
-            <div class="project-card reverse">
+                <!-- 2: Image Right, Content Left -->
+                <div class="project-card reverse">
+                    <div class="project-content">
+                        <div class="featured">
+                            <p class="project-featured">Ongoing Project</p>
+                            <h3 class="project-title">Betting App</h3>
+                        </div>
+                        <div class="project-desc">
+                        A web app for betting on local university football matches to place bets, follow live scores, and track results and history with real-time updates for campus football games.
+                        </div>
+                        <div class="project-tags">Html/css &nbsp; JavaScript &nbsp; Php and Sql Db</div>
+                        <div class="project-links">
+                        <a href="https://github.com/logicSols-glitch/niqqasharpbet.git"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-img-wrapper">
+                        <img src="img/nfcbet.PNG" alt="Project 2" />
+                    </div>
+                </div>
+
+                <!-- 3: Image Left, Content Right -->
+                <!-- <div class="project-card">
+                    <div class="project-img-wrapper">
+                        <img src="img/snipshop.PNG" alt="Project 3" />
+                    </div>
+                    <div class="project-content">
+                        <div class="featured">
+                            <p class="project-featured">Practice Project</p>
+                            <h3 class="project-title">E-commerce</h3>
+                        </div>
+                        <div class="project-desc">
+                        A practice project for an e-commerce website for clothing built using html,css and JavaScript
+                        </div>
+                        <div class="project-tags"> Html &nbsp;JavaScript &nbsp; Css</div>
+                        <div class="project-links">
+                        <a href="https://github.com/logicSols-glitch/eduford-practice-work.git"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </div> -->
+                <div class="wrapper">
+                <div>
+                    <img src="./img/academy.PNG" width="100%" height="100%" alt="">
+                </div>
+                <div class="contain-wrap">
+                    <div class="text-contain" style="float: right;">
+                        <h3>project</h3>
+                        <p>ooo</p>
+                    </div>
+                    <div class="descrption-contain">
+                        A Trial website football club website based for Niqqasharpfc designed for mobile screens only, featuring a clean layout to showcase club details and updates.
+                    </div>
+                    <div class="link-contain">
+                        <div class="project-tags"> Html &nbsp;JavaScript &nbsp; Css</div>
+                        <div class="project-links">
+                        <a href="https://github.com/logicSols-glitch/eduford-practice-work.git"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <!-- 4: Image Right, Content Left -->
+                <div class="project-card reverse">
                 <div class="project-content">
                     <div class="featured">
                         <p class="project-featured">Ongoing Project</p>
-                        <h3 class="project-title">Betting App</h3>
+                        <h3 class="project-title">FuoyeSols</h3>
                     </div>
                     <div class="project-desc">
-                    A web app for betting on local university football matches to place bets, follow live scores, and track results and history with real-time updates for campus football games.
-                    </div>
-                    <div class="project-tags">Html/css &nbsp; JavaScript &nbsp; Php and Sql Db</div>
+                    An ongoing web platform for FUOYE students Focused on solving student needs by providing access to tutorial questions, study materials, academic resources, and a space to share and find answers.                </div>
+                    <div class="project-tags">Html/css &nbsp; JavaScript &nbsp; Php</div>
                     <div class="project-links">
-                    <a href="https://github.com/logicSols-glitch/niqqasharpbet.git"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
                     <a href="#"><i class="fas fa-external-link-alt"></i></a>
                     </div>
                 </div>
                 <div class="project-img-wrapper">
-                    <img src="img/nfcbet.PNG" alt="Project 2" />
+                    <img src="img/fuoyesol.PNG" alt="Project 4" />
                 </div>
-            </div>
-
-            <!-- 3: Image Left, Content Right -->
-            <div class="project-card">
-            <div class="project-img-wrapper">
-                <img src="img/snipshop.PNG" alt="Project 3" />
-            </div>
-            <div class="project-content">
-                <div class="featured">
-                    <p class="project-featured">Practice Project</p>
-                    <h3 class="project-title">E-commerce</h3>
-                </div>
-                <div class="project-desc">
-                A practice project for an e-commerce website for clothing built using html,css and JavaScript
-                </div>
-                <div class="project-tags"> Html &nbsp;JavaScript &nbsp; Css</div>
-                <div class="project-links">
-                <a href="https://github.com/logicSols-glitch/eduford-practice-work.git"><i class="fab fa-github"></i></a>
-                <a href="#"><i class="fas fa-external-link-alt"></i></a>
-                </div>
-            </div>
-            </div>
-
-            <!-- 4: Image Right, Content Left -->
-            <div class="project-card reverse">
-            <div class="project-content">
-                <div class="featured">
-                    <p class="project-featured">Ongoing Project</p>
-                    <h3 class="project-title">FuoyeSols</h3>
-                </div>
-                <div class="project-desc">
-                An ongoing web platform for FUOYE students Focused on solving student needs by providing access to tutorial questions, study materials, academic resources, and a space to share and find answers.                </div>
-                <div class="project-tags">Html/css &nbsp; JavaScript &nbsp; Php</div>
-                <div class="project-links">
-                <a href="#"><i class="fab fa-github"></i></a>
-                <a href="#"><i class="fas fa-external-link-alt"></i></a>
-                </div>
-            </div>
-            <div class="project-img-wrapper">
-                <img src="img/fuoyesol.PNG" alt="Project 4" />
-            </div>
+                </div>  
             </div>  
-        </div>  
         <div class="grid">
         <!-- Card 1 -->
             <div class="card">
@@ -284,6 +304,42 @@
                 <span class="tag">React.js</span>
             </div>
             </div>
+            <div class="card">
+            <div class="card-header">
+                <div class="icon"></div>
+                <div class="link"></div>
+            </div>
+            <h2>FPL Clone</h2>
+            <p>A nicer look at your GitHub profile and repo stats. Includes data visualizations.</p>
+            <div class="tags">
+                <span class="tag">Js</span>
+                <span class="tag">PHP</span>
+            </div>
+            </div>
+            <div class="card">
+            <div class="card-header">
+                <div class="icon"></div>
+                <div class="link"></div>
+            </div>
+            <h2>FPL Clone</h2>
+            <p>A nicer look at your GitHub profile and repo stats. Includes data visualizations.</p>
+            <div class="tags">
+                <span class="tag">Js</span>
+                <span class="tag">PHP</span>
+            </div>
+            </div>
+            <div class="card">
+            <div class="card-header">
+                <div class="icon"></div>
+                <div class="link"></div>
+            </div>
+            <h2>FPL Clone</h2>
+            <p>A nicer look at your GitHub profile and repo stats. Includes data visualizations.</p>
+            <div class="tags">
+                <span class="tag">Js</span>
+                <span class="tag">PHP</span>
+            </div>
+            </div>
         </div>
         <div class="hero-5" id="contact">
             <div class="hero-section1">
@@ -298,7 +354,8 @@
                 <a href="mailto:nelsonjeremiah699@gmail.com" class="btn-dwn">Get In Touch</a>
                 </div>
             </div>    
-        </div>    
+        </div>  
+        
     </section> 
 </div>  
 

@@ -667,14 +667,17 @@ p {
   display: flex; padding: 90px;
 }
 .wrapper .contain-wrap{
-  width: auto;display: grid; gap: 1em;text-align: right;margin-left: -5em;position: relative;
+  display: grid; gap: 1em;text-align: right;margin-left: -5em;position: relative;
 }
 .descrption-contain{
-  border: 1px solid; padding: 30px;text-align: left;background-color: brown;
+  border: 1px solid; padding: 1px ;text-align: left;background-color: brown;
+}
+.descrption-contain p{
+  /* padding: 2em 1em; */
 }
 .wrapper img{
   object-fit: cover;
-  width: 500px;
+  width: 550px;
   /* display: block; */
   filter: blur(3px);
   cursor: pointer;
@@ -824,8 +827,11 @@ p {
 /* TABLET DEVICES (768px - 1024px) */
 @media (max-width: 1024px) {
   
-  .hero, .about, .hero-4, .hero-5 {
+.hero  , .about, .hero-4, .hero-5 {
     padding: 100px 60px;
+  }
+  .hero h6{
+    padding: 80px 0px 0px 0px;
   }
 
   .hero h1 {
@@ -928,7 +934,7 @@ p {
   }
 
   .project-content {
-    padding: 2em 1. 5em;
+    padding: 2em 1.5em;
   }
 
   .project-content .featured {
@@ -951,7 +957,7 @@ p {
   }
 
   .project-card.reverse .project-desc {
-    /* right: auto; */
+    right: auto;
   }
 
   .hero-mini5 p {
@@ -1180,7 +1186,7 @@ p {
     filter: blur(0);
   }
 
-  .wrapper .contain-wrap, .project-content {
+  .wrapper .contain-wrap {
     position: relative;
     z-index: 2;
     width: 100%;
@@ -1301,20 +1307,13 @@ p {
   }
 
   .project-desc {
-    position: relative;
-    left: 0;
-    top:  auto;
-    min-width: 100%;
-    max-width: 100%;
-    background: transparent;
-    color: #a9abba;
-    border-radius: 0;
     padding: 0;
-    font-size: 0.9em;
-    z-index: 3;
-    box-shadow: none;
+    font-size: 0.8em;
+    background-color: transparent;
     border: none;
-    margin-bottom: 1em;
+    color: #a9abba;
+    line-height: 1.5;
+    margin-bottom: 0;
   }
 
   .project-card.reverse .project-desc {
@@ -1772,5 +1771,72 @@ p {
 
   .wrapper img:active {
     filter: blur(0);
+  }
+}
+/* MOBILE DEVICES (480px - 768px) */
+@media (max-width: 768px) {
+  
+  .project-desc {
+    position: static ! important;
+    left: 0 !important;
+    right:  auto !important;
+    top: auto !important;
+    min-width: 100%;
+    max-width: 100%;
+    background: transparent;
+    color: #a9abba;
+    border-radius: 0;
+    padding: 0 0 1em 0;
+    font-size: 0.9em;
+    z-index: 3;
+    box-shadow: none;
+    border: none;
+    margin-bottom: 1em;
+    line-height: 1.5;
+  }
+
+  .project-card .project-desc {
+    position: static !important;
+    left: 0 !important;
+    right: auto !important;
+  }
+}
+
+/* SMALL MOBILE DEVICES (320px - 480px) */
+@media (max-width: 480px) {
+  
+  .project-desc {
+    position: static !important;
+    left: 0 !important;
+    right: auto !important;
+    top: auto !important;
+    min-width: 100%;
+    max-width: 100%;
+    background: transparent;
+    color: #a9abba;
+    border-radius: 0;
+    padding: 0 0 0.8em 0;
+    font-size: 0.8em;
+    z-index: 3;
+    box-shadow: none;
+    border: none;
+    margin-bottom: 0.8em;
+    line-height: 1.5;
+  }
+
+  .project-card.reverse .project-desc {
+    position: static !important;
+    left: 0 !important;
+    right: auto !important;
+  }
+}
+
+/* EXTRA SMALL DEVICES (280px - 320px) */
+@media (max-width: 320px) {
+  
+  .project-desc {
+    position:  static !important;
+    padding: 0 0 0.6em 0;
+    font-size: 0.75em;
   }
 }

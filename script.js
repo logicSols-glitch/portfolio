@@ -81,3 +81,5 @@ if (hamburger && navMenu && closeBtn) {
 //   }
 // }
 // typeEffect();
+
+console.log(window.screen)
